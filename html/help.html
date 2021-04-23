@@ -1,0 +1,706 @@
+<style>
+    pre {
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+    .help-list {
+        padding: 0px;
+    }
+
+    #lego-map {
+        text-align: left;
+    }
+    #lego-map tr:nth-child(even) {background: #eee}
+    #lego-map tr:nth-child(odd) {background: #FFF}
+    #lego-map td {
+        padding: 4px;
+    }
+
+
+    .help-list li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        list-style-position: inside;
+        border-bottom: 2px dotted #ccc;
+    }
+
+    topic {
+        font-weight: bolder;
+    }
+    .example {
+        border: 2px; border-style: dotted; border-color: aqua;
+    }
+</style>
+<div id="toc"></div>
+<ol class="help-list">
+    <li id="first"><topic>First.</topic>
+        <p>Right click on this page and click on 'View Source'.<br>
+        <b>Always View Source</b> if you want to learn how things are done.<br>
+        </p>
+    </li>
+    <li id="change_small_things"><topic>Change small things.</topic>
+        <p>If you see someone else's page that you like (e.g. <a
+        href="/d/jakiegro">/d/jakiegro</a>), right click on the page and select
+        View Source, then you can copy the text in notepad and change it a
+        little bit, learn from it and use it in your own page.</p>
+    </li>
+
+    <li id="start_small"><topic>Start small.</topic><br>
+        <p>Making a page can be a bit overwhelming, so just start small. for example:
+<pre>
+&lt;html>
+ &lt;body>
+   &lt;h1>welcome!&lt;/h1>
+   &lt;p>this is my page&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+</p>
+    </li>
+
+    <li id="what_to_google_for"><topic>What to google for?</topic>
+        <p>If you want to write secret things its wise to use code, simply
+        reversing the text already makes it difficult to read. For example:
+        <i>?rof elgoog ot tahW</i> see? But it can get quite complicated in
+        order to make it harder to read, so search for 'morse code', 'rot13',
+        'pigpen'. Also ask your mom and dad for help, they must have used some
+        strange code to talk to their friends at school.
+        </p>
+    </li>
+
+    <li id="ascii"><topic><a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a></topic>
+        <p>Computers do not understand text, so when you see text it is usually
+        some number that is converted to a character, for example 65 is A, 66 is
+        B, and so on.<br>About 60 years ago some people agreed on a common way
+        to map number to character, called THE ASCII STANDARD, super fancy name,
+        for such a simple thing.<br>I bet you came up with all kinds of number
+        to letter code on your own! We would love to hear about it, so you can
+        ask your parents to send us your code at detectiveninja@fastmail.com and
+        we might publish it.
+        </p>
+        <br>
+        Try to decode: <code>110 105 99 101 32 119 111 114 107 33</code>
+<pre>
+32  SPC   64  @    96  `
+33  !     65  A    97  a
+34  "     66  B    98  b
+35  #     67  C    99  c
+36  $     68  D   100  d
+37  %     69  E   101  e
+38  &     70  F   102  f
+39  '     71  G   103  g
+40  (     72  H   104  h
+41  )     73  I   105  i
+42  *     74  J   106  j
+43  +     75  K   107  k
+44  ,     76  L   108  l
+45  -     77  M   109  m
+46  .     78  N   110  n
+47  /     79  O   111  o
+48  0     80  P   112  p
+49  1     81  Q   113  q
+50  2     82  R   114  r
+51  3     83  S   115  s
+52  4     84  T   116  t
+53  5     85  U   117  u
+54  6     86  V   118  v
+55  7     87  W   119  w
+56  8     88  X   120  x
+57  9     89  Y   121  y
+58  :     90  Z   122  z
+59  ;     91  [   123  {
+60  &lt;     92  \   124  |
+61  =     93  ]   125  }
+62  >     94  ^   126  ~
+63  ?     95  _
+</pre>
+
+    </li>
+    <li id="rot1"><topic>ROT1</topic>
+        <p>The simplest thing you can do is make A to be B, B to be C and so on
+        until Z becomes A, as if the alphabet is on a circle and you turn it
+        right one character.</p>
+
+        <pre>
+abcdefghijklmnopqrstuvwxyz
+bcdefghijklmnopqrstuvwxyza
+        </pre>
+        
+        <p><i>hello world</i> becomes <i>ifmmp xpsme</i><br>
+        This is already difficult to read!</p>
+    </li>
+
+    <li id="rot13"><topic><a href="https://en.wikipedia.org/wiki/ROT13">ROT13</a></topic>
+        <p>You can do the same, but rotating it 13 times, so that A becomes N, B
+        becomes O and Z becomes M</p>
+        <pre>
+abcdefghijklmnopqrstuvwxyz
+nopqrstuvwxyzabcdefghijklm
+        </pre>
+
+        <p><i>Why did the chicken cross the road?</i> becomes <i>Jul qvq gur
+        puvpxra pebff gur ebnq?</i>. See? Amazing how different the result
+        is.</p>
+        <img width="200px" src="/static/ROT13_table_with_example.svg.png">
+    </li>
+
+    
+    <li id="a1z26"><topic>A1Z26</topic>
+        <p>Another way to encode letters to numbers, is to simply make A to be 1
+        and Z to be 26. Can you imagine how A65Z90 looks like?
+        </p>
+        <pre>a 1
+b 2
+c 3
+d 4
+e 5
+f 6
+g 7
+h 8
+i 9
+j 10
+k 11
+l 12
+m 13
+n 14
+o 15
+p 16
+q 17
+r 18
+s 19
+t 20
+u 21
+v 22
+w 23
+x 24
+y 25
+z 26</pre>
+    </li>
+    <li id="pigpen"><topic><a href="https://en.wikipedia.org/wiki/Pigpen_cipher">Pigpen</a></topic>
+        <p>This is super cool cipher!</p>
+
+        <img width="100%" style="max-width: 400px" src="/static/pigpen-demo.png"><br>
+        Try to decode this:<br>
+        <span style="font-family: 'pigpen', serif;">it looks just amazing!</span>
+    </li>
+    <li id="substitution_chiper"><topic><a href="https://en.wikipedia.org/wiki/Substitution_cipher">Substitution cipher</a></topic>
+        <p>All those are substitution ciphers, there is some sort of a map, or
+        series of steps you take to transform the words into encrypted code, and
+        then the inverse operation to go back from code into words.</p>
+    </li>
+    <li id="favorite_book"><topic>Favorite book.</topic>
+        <p>let's say you and your friend have a favorite book, Alice in Wonderland<br>
+        <img width="100%" style="max-width: 400px" src="/static/Lewis_Carroll_-_Alice's_Adventures_in_Wonderland.djvu.jpg"><br>
+        </p>
+        <p>
+        So we can agree on code page number, row number, word number. For
+        example: <code>3 1 3 3 14 8</code> is 'curiosity time' (page 3, row 1,
+        word 3, page 3, row 14, word 8). Both you and your friend have to know
+        the book you are going to use in advance. You can see this is quite more
+        powerful than the previous substitution methods. Because now there is a
+        piece of information that only you two know, and even if someone gets
+        the code, there is little he can do to decrypt it. There are grownup
+        methods to decipher this kind of code, but for kids it is quite
+        difficult even if they get the code in plain sight.</p>
+    </li>
+    <li id="html"><topic>HTML</topic>
+        <p>The app you are using right now to see this website is called a web
+        browser, I don't know if kids still call it like that, but adults do. It
+        works in a very similar way to the ASCII code and the other substitution
+        ciphers.</p>
+        <p>For example, try this on your page:
+        <pre>
+&lt;b>this is bold&lt;/b>
+        </pre>
+        </p>
+        <p>
+            it will show:
+            <div class='example'>
+                <b>this is bold</b>
+            </div>
+        </p>
+        <p>
+        First the browser app downloads the web page, which is just a normal
+        text file (it is what you see when you click on View Source), then it
+        has to process it, in the same way you read pigpen code or ascii code,
+        you look symbol by symbol and try to make sense out of it by making it
+        into letters you understand.</p>
+
+        <p>It looks for special characters '&lt;' and then '&gt;', like with the
+        favorite book code, when you agree with your friend that the first digit
+        will be the page, when it sees '&lt;' it knows what ever is between
+        '&lt;' and '&gt;' is important word. Then it has kind of a table so it
+        know what to do with different words, when it sees 'b' it knows that
+        whatever is inside is gonna get <b>bold</b>.
+        There are many words like that you should try for yourself 'b' 'i' 'u'
+        'h1', and many more.</p>
+
+        </p>let try some more things:<br>
+        <pre>&lt;ul>
+    &lt;li>
+      first &lt;b>item&lt;/b>
+    &lt;/li>
+    &lt;li>
+      second &lt;i>item&lt;/i>
+    &lt;/li>
+    &lt;li>&lt;h2>third&lt;/h2>
+  &lt;/li>
+&lt;/ul></pre>
+</p>
+        <p>
+        It will look like:<br>
+        <div class='example'>
+        <ul style="list-style: outside;">
+            <li style="padding: 0px;border-bottom: 0px;">first <b>item</b></li>
+            <li style="padding: 0px;border-bottom: 0px;">second <i>item</i></li>
+            <li style="padding: 0px;border-bottom: 0px;"><h2>third</h2></li>
+        </ul>
+        </div>
+        </p>
+
+        <p>'ul' (which means unordered list) and 'li' means 'list item', so it
+        makes it look like a list. 'h2' is to to make it big and on its own
+        line, like the title of a book chapter.</p>
+
+        Making lines:<br>
+<pre>
+first
+line&lt;br>
+second line&lt;br>
+&lt;hr>
+third line&lt;br>
+</pre>
+
+    <div class='example'>
+        first
+        line<br>
+        second line<br>
+        <hr>
+        third line<br>
+    </div><br>
+        <p>'br' means line break, when the browser sees it know it has to show
+        whatever comes next on another line, 'hr' means horizontal rule,just
+        like when you take your ruler and draw a line from left to right in the
+        text book. You see, even though you write things in separate lines (like
+        the word first and line are clearly on separate lines), the browser will
+        not know what to do until you tell it to 'br'. Maybe in school you had a
+        project you have to use PowerPoint to make a presentation? With the
+        special words ul, li, br, hr, h2 and b you can make your own
+        presentation in HTML!</p>
+    </li>
+    <li  id="megalegolang"><topic>Make your own language</topic>
+        <p>'What I can not create, I do not understand' the poet said, so let's make
+        our own language that we can use to combine LEGO bricks. How many brick
+        kinds you know? Most common ones are small(2 bumps) square(4 bumps) and
+        rectangle(8 bumps), they can be thick or thin, and there are also the
+        weird ones with 6 bumps. And of course the one with only 1 bump and
+        actually.. long ones with 1 line of 6 bumps or 8 or 12 bumps.</p>
+        
+        <p>We can just give them funny names, the 2x2 square will be 'gobby',
+        2x6 will be 'moby'... let's just make a table</p>
+
+        <small>(interested to know how to make tables with HTML? just view source!)</small><br>
+        <table id="lego-map">
+            <tr>
+                <th>
+                    fat/thin
+                </th>
+                <th>
+                    bumps
+                </th>
+                <th>
+                    name
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    fat
+                </td>
+                <td>
+                    2x2
+                </td>
+                <td>
+                    gobby
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    thin
+                </td>
+                <td>
+                    2x2
+                </td>
+                <td>
+                    squash
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    thin
+                </td>
+                <td>
+                    1x8
+                </td>
+                <td>
+                    pancake
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    fat
+                </td>
+                <td>
+                    2x2
+                </td>
+                <td>
+                    moby
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    fat
+                </td>
+                <td>
+                    1x1
+                </td>
+                <td>
+                    dot
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    fat
+                </td>
+                <td>
+                    1x2
+                </td>
+                <td>
+                    pinky
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    thin
+                </td>
+                <td>
+                    1x4
+                </td>
+                <td>
+                    dodo
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                    thin
+                </td>
+                <td>
+                    2x4
+                </td>
+                <td>
+                    pika
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    fat
+                </td>
+                <td>
+                    2x4
+                </td>
+                <td>
+                    bobo
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    fat
+                </td>
+                <td>
+                    2x8
+                </td>
+                <td>
+                    mega-worm
+                </td>
+            </tr>
+        </table>
+        <p>.. this list is quite long and we are not even done yet, I will let
+        you come up with your own names for the pieces that are missing. So now
+        we need to define how to join pieces together, for that we need a way to
+        address each bump/hole on each piece.</p>
+        <img src="/static/lego.jpg" width="100%" style="max-width: 300px"><br>
+        <p>We should agree on how we put the bricks on the paper, let's always
+        put the long side down, like on the picture. Now we can address each
+        stud, so 2,2 is the stud I am pointing at. Its time to make a plane!</p>
+        <pre>pancake(4,1)->mega-worm(3,1)
+pancake(4,2)->mega-worm(2,1)
+pancake(5,1)->mega-worm(3,2)
+pancake(5,2)->mega-worm(2,2)
+dodo(2,2)->mega-worm(7,1)
+dodo(3,2)->mega-worm(7,2)
+dodo(2,1)->mega-worm(8,1)
+dodo(3,1)->mega-worm(8,2)</pre>
+        <p>let's use -> to say 'goes to' and () we will use just to group the
+        numbers, even though it looks quite frightening it we have to compromise
+        a bit, to make it easy for us to write so its short and concise. It goes
+        from left to right, so you take first piece, and then attach what
+        follows to the specific stud, so stud 3,1 on mega-worm is on top of stud
+        4,1 on pancake.</p>
+        <p>And we have our plane! (well it requires a bit of imagination to call
+        this a plane, but I am sure you can handle that part)</p>
+        <img src="/static/plane.jpg" width="100%" style="max-width: 300px"><br><br>
+
+        <p>So this is our language, we have a piece name, then describe which
+        stud goes on below which stud, and that's it! we can build everything.
+        Oh, but we don't have a name yet, let's call it... MEGALEGOLANG :D</p>
+        
+        <p>I will leave it up to you to write down the steps to build this:</p>
+        <img src="/static/lego-2.jpg" width="100%" style="max-width: 300px"><br>
+        <p>Haha no, I am joking! The instructions for this set described by
+        using MEGALEGOLANG will be longer than the tallest building in the
+        world! This language is quite limited, and actually quite inefficient,
+        but the point I am trying to make is that, the words we made up have
+        some meaning that we give to them, like 65 is 'A' in ASCII, but only
+        because we know we are reading ASCII we can translate it. When you 'View
+        Source' on any page, you will see <b>a lot</b> of words, some of which
+        you will see for the first time, but try to remember, almost none of
+        them do complicated things, you just have to know where to find
+        information about them, usually searching in google for 'HTML
+        word_you_are_looking_for' will give you what you need, try <a
+        href="https://google.com/search?q=HTML+h2">HTML h2</a>, you will see
+        lots of results, usually the results on developer.mozilla.org are
+        great.</p>
+    </li>
+
+    <li id="supermegalegolang"><topic>SUPERMEGALEGOLANG</topic>
+        <p>Ok, its obvious that using MEGALEGOLANG for serious projects will be
+        a daunting task, I think it's time to make a better version that is
+        easier to describe things in, MEGALEGOLANG makes it very difficult
+        to describe the most important property of lego parts, connecting
+        them together, because we have to describe each point, what if we are
+        connecting tiles 12x12? we have to write a whole page of instructions
+        just to connect two pieces.
+        </p>
+
+        <p>What is the minimum amount of information we need in order to connect
+        two things?</p>
+        <p>First we need to know the kind of pieces we are connecting.
+        We can stick to our current method of using a table that uniquely
+        identifies each piece, which is not ideal, but will do the job for now.
+        </p>
+
+        <p>Second, we need to know at least one bump and then their orientation.
+        That means we have to know where is it pointing at, so to do that we
+        will draw 2 lines that have a right angle between them, if you don't
+        know what a right angle is, or what an angle do not worry. It is just a
+        part of a circle. I will give names to the lines so it is easier to talk
+        about them, the line going up we will call Y, and line going right we
+        will call X, as I said previously, don't be scared of names of
+        things.</p>
+        <img src="/static/circle.jpg" width="100%" style="max-width: 300px"><br>
+        <p>
+            See the amount of circle between the X line and the lego piece
+            is ZERO! it is right on the line, so we call this orientation 0<br>
+            <img src="/static/angle-0.jpg" width="100%" style="max-width: 300px">
+        </p>
+        <p>
+            This one is exactly 1/4th of the circle, and we have decided to have 360 pieces in a circle, since ancient times, 360/4 is 90, so this is orientation is 90<br>
+            <img src="/static/angle-90.jpg" width="100%" style="max-width: 300px">
+        </p>
+        <p>this one is half of 90, so 45<br>
+            <img src="/static/angle-45.jpg" width="100%" style="max-width: 300px">
+        </p>
+        <p>
+            We should keep the orientation and the stud numbering separate, so
+            2,2 or 1,8 will always assume the piece is oriented in position
+            orientation 0. Now if we say bump 3,2 orientated 0 on mega-worm
+            connects to 1,1 on pika oriented 90, it will look like this:<br>
+            <img src="/static/connect.jpg" width="100%" style="max-width: 300px">
+
+        </p>
+        <p>
+            Now, it is time to improve our language,let's try:
+            <pre><i>piece name(orientation,x,y)</i>
+
+our plane looks like this:
+pancake(0,1,4)->mega-worm(90,1,3)
+dodo(0,1,2)->mega-worm(90,8,1)</pre>
+
+        </p>
+        <p>Wow! so much simpler! .. Well we had to introduce orientation and
+            angles and stuff, but we have to write way less, in the same time,
+            maybe the previous language is actually simpler, because we only
+            have to know about bumps and that's it.</p>
+    
+        <p>
+            You are learning to do computer stuff when everything is 'simple',
+            and yet it is not really, it just has a lot of meaning hidden inside
+            few words, so just keep digging, whenever you stumble on something
+            that doesn't make sense, first view source, then google, then try to
+            use it, and then try to make it yourself, because when you can make
+            something yourself, that is when you truly understand it.
+        </p>
+
+        <p>
+            Sometimes we want to connect complicated pieces together, so for example, we have our plane, and we want to connect it to another plane
+            <pre>PLANE:
+  pancake(0,1,4)->mega-worm(90,1,3)
+  dodo(0,1,2)->mega-worm(90,8,1)
+
+PLANE(0,1,1)->PLANE(0,2,2)
+</pre>
+PLANE() just like pancake() takes orientation, x, y, so after the plane is
+built, and in your hand, you can connect it with the other PLANE() on the
+specific bumps, you will also see that our language breaks down at this point,
+because we would need another parameter, in order to uniquely identify a bump we
+have how much on the left, top and how tall it is.
+</p>
+<p>
+    In order to make it work we would need something like
+    <code>PLANE(0,1,1,0)->PLANE(0,2,2,0)</code>, where the 4th element will say
+    which piece from the bottom we are addressing. for this I think its easier
+    to just count pieces, like 1,2,3 from the bottom.
+</p>
+<p>
+    So our program be comes:
+    <pre>PLANE:
+  pancake(0,1,4)->mega-worm(90,1,3)
+  dodo(0,1,2)->mega-worm(90,8,1)
+
+PLANE(0,1,1,0)->PLANE(0,2,2,1)
+      </pre>
+      
+    <p>
+        I feel we can do better than this mega-worm, pancake business, because
+        we can already define 1x5 or 2x2, 2x8 bricks, so maybe its better to
+        just pass them as parameters? We will also introduce a new label START,
+        so whatever is in it we do first.
+<pre>
+PLANE:
+    CONNECT(
+        1x8,  0, 1, 4,
+        2x8, 90, 1, 3 
+    )
+
+    CONNECT(
+        2x4,  0, 1, 2, 
+        2x8, 90, 8, 1
+    )
+
+START:
+    CONNECT(
+        PLANE(), 0, 1, 1, 0,
+        PLANE(), 0, 2, 2, 1
+    )
+</pre>
+We can now connect whatever is the result of PLANE(), to something else.<br>
+<pre>
+PLANE:
+    CONNECT(
+        1x8,  0, 1, 4,
+        2x8, 90, 1, 3 
+    )
+
+    CONNECT(
+        2x4,  0, 1, 2,
+        2x8, 90, 8, 1
+    )
+MEGAPLANE:
+    CONNECT(
+        PLANE(), 0, 1, 1, 0,
+        PLANE(), 0, 2, 2, 1
+    )
+
+START:
+    CONNECT(
+        MEGAPLANE(), 0, 8, 1, 1,
+        2x8,        90, 8, 1, 0
+    )
+    </pre><br>
+
+    This is very powerful! you see we can keep combining those objects into
+    making bigger and bigger things.
+</p>
+
+</p>
+    </li>
+    <li id="code"><topic>CODE</topic>
+        <p>Its time to write some real code, try this on your page:</p>
+        <pre>&lt;script>
+    var password = prompt('what is the password?')
+    if (password == 'everest') {
+        alert('WELCOME!')
+    } else {
+        alert('GO AWAYY!')
+    }
+&lt;/script>
+        </pre>
+        <p>First try it and then continue to read.</p>
+        .<br>
+        .<br>
+        .<br>
+        .<br>
+        .<br>
+        .<br>
+        .<br>
+        .<br>
+        <p>Did you try it?</p>
+        <p>Ok, lets go word by word. <b>&ltscript></b> is a special HTML word,
+        like 'ul' or 'h2' that tells the browser that whatever is inside is
+        code, its not supposed to show this text as text or as HTML, but run
+        this little program, and let it do what it does. Kind of like our
+        SUPERMEGALEGOLANG, its just a set of instructions</p>
+        
+        <p><b>prompt</b>, is like a mini program, will tell the browser to ask
+        you a question, it will return whatever you wrote in it. Kind of like
+        the instructions to make a PLANE in SUPERMEGALEGOLANG, with one
+        difference that in SUPERMEGALEGOLANG you are holding the result in your
+        hand, so its obvious where it is, in case of prompt() it will return the
+        result to wherever it was called.</p>
+        <p><b>var password</b> is a variable, its just a place we can put
+        whatever value we want, we can say 'var password = 123', its the '='
+        that puts whatever is on the right side of it, into whatever variable is
+        on the left. so var password = prompt('what time is it'), puts the
+        result of the prompt mini program into the variable password. 
+        </p>
+
+        <p>Next comes <b>'if(something) { do A } else { do B }'</b>
+            the squiggly brackets just group a bunch of instructions together in
+            a 'block' of code, so what this does is if something is true, then it 
+            will 'do A', otherwise it will 'do B'
+        </p>
+        <p>
+            <b>alert</b> will show a popup with whatever alert you give it. Wanna try something funny?
+            <pre>&lt;script>
+    alert(prompt('guess a number between 1 and 1 million and I will tell you what it is:'))
+&lt;/script></pre>
+        </p>
+        <p>
+            Quick note about the quotation marks <b>'</b>, the same way the
+            browser reads &lt;&gt; to make sense, when it is reading a script,
+            it actually does not know what is a special word, and what is some
+            text you wrote. so if I say 'if (password == everest)' it will be
+            confused, what is everest, it has never seen it in the program
+            before, but if I say 'everest' it knows has to compare the value of
+            variable password with the text 'everest'.
+        </p>
+    </li>
+</ol>
+
+<script>
+    let toc = document.getElementById('toc')
+    for (let topic of document.getElementsByTagName('topic')) {
+
+        let a = document.createElement('a')
+        a.href = '#' + topic.parentNode.id
+        a.innerText = topic.innerText
+        let li = document.createElement('li')
+        li.appendChild(a)
+        toc.appendChild(li)
+
+    }
+</script>

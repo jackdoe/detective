@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            detective ninja
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="/static/logo.png">
+
+        <style>
+            body {
+                font-family: monospace;
+            }
+            div {
+                padding: 5px;
+            }
+            blink {
+                animation: blinker 1s linear infinite;
+            }
+
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+            iframe {
+                width: 50%;
+                height: 100%;
+            }
+        </style>
+        <script>
+            function checkForm(form) {
+                if(!form.terms.checked) {
+                    alert("Please indicate that you accept the Terms and Conditions");
+                    form.terms.focus();
+                    return false;
+                }
+                return true;
+            }  
+        </script>        
+    </head>
+    <body>
+        <div>
+            <div><h2>Welcome!</h2></div>
+            <div>Now you can create your personal detective agency page.</div>
+            <div>&nbsp;</div>
+            <div>You need to pick a name, and it has to be <blink>exactly</blink> 8 letters long</div>
+            <div>Think carefully about it, you can not change it later.</div>
+            <div>&nbsp;</div>
+            
+            <form method="POST" onsubmit="return checkForm(this);">
+                <div><label for="page">agency name:</label> <input type="text" pattern="[a-z]+" id="page" name="page" maxlength="8" minlength="8" required></div>
+                <div><input type="checkbox" required name="terms">I accept the <a href="#tos">Terms and Conditions</a></div>
+        
+                <div><button type='submit'>create my detective page!</button></div>
+            </form>
+        </div>
+        <hr>
+        <div>
+            {{ template "tos.html" }}
+        </div>
+    </body>
+</html>

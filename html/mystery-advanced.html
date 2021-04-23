@@ -1,0 +1,117 @@
+<div class="mystery" data-group="advanced" data-label='for 🤖!'>
+    <textarea></textarea>
+    <textarea>
+<button onclick="makeManyButtons()">🤖</button>
+<script>
+    function makeManyButtons() {
+        // try to make million buttons!
+
+        for(var i = 0; i < 100; i++) {
+            var button = document.createElement('button')
+            button.innerText = '🐹'
+            document.body.appendChild(button)
+        }
+    }
+</script>
+</textarea>
+</div>
+
+<div class="mystery" data-group="advanced" data-label='for 🦊!'>
+    <textarea></textarea>
+    <textarea>
+<button onclick="replicate(10,'🦊')">🤖</button>
+<script>
+    function replicate(n,buttonText) {
+        // try to make million buttons!
+
+        for(var i = 0; i < n; i++) {
+            var button = document.createElement('button')
+            button.onclick = function () {
+                replicate(20,'🦓')
+            };
+            button.innerText = buttonText
+            document.body.appendChild(button)
+        }
+    }
+</script>
+</textarea>
+</div>
+
+<div class="mystery" data-group="advanced" data-label="🐺 console 🐺">
+<textarea></textarea>
+<textarea>
+Right click on this page, click Inspect and then go to Console.
+<script>
+    console.log('🐺🐺🐺🐺 You can see that in the console. 🐺🐺🐺🐺')
+    console.log('🐺🐺🐺🐺 type 12312*18237978123 in the console and see what happens. 🐺🐺🐺🐺')
+</script>
+</textarea>
+</div>
+
+
+
+<div class="mystery" data-group="advanced" data-label="page inside a page">
+    <textarea></textarea>
+    <textarea>
+<html>
+    <h1>WELCOME</h1>
+    <iframe width="100%" height="100%" src="/d/{{.page.ID}}"></iframe>
+</html>
+</textarea>
+</div>
+
+<div class="mystery" data-group="advanced" data-label="hidden page">
+<textarea>html=<html><h2>🌈</h2><p>this page does not exist in view-source, try it!</p></html></textarea>
+<textarea>
+<script>
+    // fetch make a request download whatever it is on /x/{{.page.ID}}/html
+    // then it will download it
+    // and then we will write to the document whatever comes back
+    // in our case it will be our html page!
+    fetch('/x/{{.page.ID}}/html').then(r => {
+        return r.text()
+    }).then(r => {
+        document.write(r)
+    })
+
+    // use console.log() to see each step
+</script>
+</textarea>
+</div>
+
+<div class="mystery" data-group="advanced" data-label="canvas 🎨">
+    <textarea></textarea>
+    <textarea>
+<html>
+<body style="padding: 0; margin: 0">
+<canvas id="squares"></canvas>
+<script>
+
+var canvas=document.getElementById('squares');
+var ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth; // set the canvas width to be the whole window width
+canvas.height=window.innerHeight; // set the canvas height to be the whole window height
+
+function draw() {
+
+   ctx.fillStyle= '#' + Math.floor(Math.random()*16777215).toString(16); // pick random color
+   ctx.globalAlpha=0.5; // blocks will be semi-transparent
+
+   var size=Math.floor((Math.random()) * 60) + 1; // pick random size up to 60
+   var x = Math.floor(Math.random()*canvas.width)
+   var y = Math.floor(Math.random()*canvas.height)
+
+   ctx.fillRect(x, y, size, size); // make the square at random X, Y and with the random size
+};
+
+setInterval(draw,10); // every 10 milliseconds draw a random square
+
+// why dont you try to make them rectangles instead of squares?
+// or maybe even circles? google for 'canvas fillRect' and 'canvas arc'
+</script>
+</body>
+</html>
+</textarea>
+</div>
+

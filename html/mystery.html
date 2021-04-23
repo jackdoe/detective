@@ -1,0 +1,58 @@
+<style>
+    .mystery {
+        display: none;
+    }
+    select, textarea, input {
+        font-size: 16px;
+    }
+</style>
+
+examples: <select onchange="use();" id='choose-template'><option value=""></option></select>
+
+{{ template "mystery-basic.html" .}}
+{{ template "mystery-secret.html" .}}
+{{ template "mystery-funny.html" .}}
+{{ template "mystery-advanced.html" .}}
+{{ template "mystery-ciphers.html" .}}
+
+<script>
+    let makeOptGroup = (label) => { 
+        let o = document.createElement('optgroup')
+        o.setAttribute('label',label)
+        return o
+    }
+    let perGroup = {
+        'basic': makeOptGroup('basic'),
+        'advanced':  makeOptGroup('advanced'),
+        'ciphers':  makeOptGroup('ciphers'),
+        'funny':  makeOptGroup('funny'),
+        'secret':  makeOptGroup('secret'),
+
+    }
+    let idx = 0;
+    for (let m of document.querySelectorAll('.mystery')) {
+        let group = m.getAttribute('data-group')
+        let opt = document.createElement('option')
+        opt.innerText = m.getAttribute('data-label')
+        opt.value = idx
+        perGroup[group].appendChild(opt)
+        idx++
+    }
+    let select = document.getElementById('choose-template')
+    for (let optgroup of ['basic','funny','advanced','ciphers','secret']) {
+        select.appendChild(perGroup[optgroup])
+    }
+
+    function use() {
+        let idx = document.getElementById("choose-template").value;
+        if (idx) {  
+            let opt =  document.querySelectorAll('.mystery')[idx]
+            let areas = opt.getElementsByTagName('textarea')
+            let hidden = areas[0]
+            let page = areas[1]
+
+            hiddenE.value =  hidden.value
+            pageE.value = page.value
+        }
+    }
+</script>

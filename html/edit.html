@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            detective ninja
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="/static/logo.png">
+
+        <style>
+            body {
+                font-family: monospace;
+                padding: 5px;
+            }
+            li {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            blink {
+                animation: blinker 1s linear infinite;
+            }
+            @font-face {
+                font-family: pigpen;
+                src: url("/static/pigpen.otf") format("opentype");
+            }
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+            textarea {
+                border: 2px;
+                border-style: dotted;
+                border-color: red;
+
+                width: 100%;
+            }
+            textarea.green {
+                border-color: blue;
+            }
+            iframe {
+                border: 2px;
+                border-color: purple;
+                border-style: dotted;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        Welcome to <a href="https://detective.ninja/d/{{ .page.ID}}">detective.ninja/d/{{ .page.ID}}</a><br>
+        Things you can do: 
+        <ul>
+            <li><a href="#edit">edit</a></li>
+            <li><a href="#preview">preview</a></li>
+            <li><a href="#help">help</a></li>
+            <li><a href="javascript:undo()">undo!</a></li>
+            <li>{{ if .showPreview }}<a href="?show_preview=false">hide preview</a>{{ else }}<a href="/edit">show preview</a>{{ end }} </li>
+            <li>{{ template "mystery.html" . }}</li>
+            <li><a href="/logout">logout</a></li>
+        </ul>
+        
+        <hr>
+        <form id="edit" method="post">
+            <b>Secret Vault:</b><br>
+            value is splitted by <code>|</code> and then by <code>=</code><br>
+            so if you have <code>a=b|c=d</code> and then you can fetch <code>https://detective.ninja/x/{{.page.ID}}/a</code> it will return the string <code>b</code> and /c will return <code>d</code><br>
+            <br>
+            <span id="hidden-left">({{len .page.Hidden }}/4096 characters left)</span><br>
+            <textarea id='hidden' maxlength="4096" rows=4 cols=40 name="hidden">{{ .page.Hidden }}</textarea>
+            <br>
+            <br>
+            <b>Detective Page:</b><br>
+            <span id="page-left">({{len .page.Page }}/4096 characters left)</span><br>
+            <textarea id='page' maxlength="4096" class="green" rows=40 cols=40 name="page">{{ .page.Page }}</textarea>
+            <br>
+            <br>
+            <button type='submit'>Save!</button>
+        </form>
+        {{ if .showPreview }}
+        <hr>
+        <b>Preview:</b><br>
+        <iframe id="preview" src="/d/{{ .page.ID }}"></iframe>
+        {{ end }}
+        <hr>
+        <div id="help">
+{{template "help.html"}}
+        </div>
+    </body>
+    <script>
+        var hiddenE = document.getElementById('hidden')
+        var pageE = document.getElementById('page')
+        var currentHidden = hiddenE.value
+        var currentPage = pageE.value
+        function undo() {
+            pageE.value = currentPage
+            hiddenE.value = currentHidden
+        }
+        var maxchar = 4096;
+
+        var count = function(t,id) {
+            let v = maxchar - t.value.length
+            document.getElementById(id).innerHTML = '(' + v + '/' + maxchar + ' characters left)'
+        }
+
+        document.getElementById("page").addEventListener("keyup",(e) => count(e.target, 'page-left'));
+        document.getElementById("hidden").addEventListener("keyup",(e) => count(e.target, 'hidden-left'));
+
+        document.addEventListener("keydown", function(e) {
+            if ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)  && e.keyCode == 83) {
+                e.preventDefault();
+                document.getElementById("edit").submit();
+            }
+        }, false);
+    </script>
+</html>

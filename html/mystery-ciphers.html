@@ -1,0 +1,53 @@
+
+<div class="mystery" data-group="ciphers" data-label="to ASCII">
+    <textarea></textarea>
+    <textarea>
+text: <input type="text" id="text_to_ascii"> <button id="show">ascii!</button>
+<div id="result"></div>
+
+<script>
+document.getElementById('show').addEventListener('click', function(e) {
+    // get the value in the input field
+    var textValue = document.getElementById('text_to_ascii').value
+    var result = ''
+
+    // for each character index get the ascii code at that index and put it in the result
+    // so if the text is 'hello', it will make will say, give me the ascii at 0, 1, 2, 3, 4
+    for (var i = 0; i < textValue.length; i++) {
+        result+= textValue.charCodeAt(i) + ' '
+    }
+    // show the result in the 'result' HTML element
+    document.getElementById('result').innerText = result
+})
+</script>
+</textarea>
+</div>
+
+
+
+
+<div class="mystery" data-group="ciphers" data-label="reverse it">
+    <textarea></textarea>
+    <textarea>
+text: <input type="text" id="text_to_reverse"> <button id="reverse">reverse!</button>
+<div id="result"></div>
+
+<script>
+
+document.getElementById('reverse').addEventListener('click', function(e) {
+    // get the value in the input field
+    var textValue = document.getElementById('text_to_reverse').value
+
+    // make the text into separate chars
+    var characters = textValue.split('')
+    var result = ''
+
+    // for each character starting at the end, add it to the result
+    for (var i = characters.length -1; i >= 0; i--) {
+        result+= characters[i]
+    }
+    document.getElementById('result').innerText = result
+})
+</script>
+</textarea>
+</div>

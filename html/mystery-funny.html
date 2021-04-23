@@ -1,0 +1,83 @@
+
+<div class="mystery" data-group='funny' data-label='🐑'>
+    <textarea></textarea>
+    <textarea>
+<html>
+<body>
+    <div id='sheep' style='position:absolute'>🐑</div>
+    <script>
+        var sheep = document.getElementById('sheep')
+        document.body.onmousemove = (e) => {
+            sheep.style.left = (e.clientX - 5 + 'px');
+            sheep.style.top = (e.clientY - 5 + 'px');
+        }
+    </script>
+</body>
+</html>
+</textarea>
+</div>
+
+<div class="mystery" data-group='funny' data-label='delayed 🐑'>
+    <textarea></textarea>
+    <textarea>
+<html>
+<body>
+    <div id='sheep' style='position:absolute'>🐑</div>
+    <script>
+        var sheep = document.getElementById('sheep')
+        document.body.onmousemove = (e) => {
+            setTimeout(() => {
+                sheep.style.left = (e.clientX - 5 + 'px');
+                sheep.style.top = (e.clientY - 5 + 'px');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
+</textarea>
+</div>
+
+
+<div class="mystery" data-group='funny' data-label='🌈'>
+    <textarea></textarea>
+    <textarea>
+<html>
+    <body>
+        <h1>🌈</h1>
+        <h1 style="color: red;">red</h1>
+        <h1 style="color: orange">orange</h1>
+        <h1 style="color: yellow">yellow</h1>
+        <h1 style="color: green">green</h1>
+        <h1 style="color: blue">blue</h1>
+        <h1 style="color: indigo">indigo</h1>
+        <h1 style="color: violet">violet</h1>
+    </body>
+</html>
+</textarea>
+</div>
+
+
+
+
+<div class="mystery" data-group='funny' data-label='👻'>
+    <textarea></textarea>
+    <textarea>
+<button onclick="this.parentNode.removeChild(this)">👻</button>
+</textarea>
+</div>
+
+<div class="mystery" data-group='funny' data-label='🐛'>
+    <textarea></textarea>
+    <textarea>
+<button onclick="document.body.appendChild(this.cloneNode(true))">🐛</button>
+</textarea>
+</div>
+
+<div class="mystery" data-group="funny" data-label="🐛🐛🐛🐛">
+    <textarea></textarea>
+    <textarea>
+<button onclick="this.appendChild(this.cloneNode(true))">🐛</button>
+</textarea>
+</div>
+
+
