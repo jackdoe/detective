@@ -200,6 +200,11 @@ func main() {
 	})
 
 	r.GET("/register", func(c *gin.Context) {
+		if !*local {
+			c.String(400, "registrations are temoporary paused, send an email to detectiveninja@fastmail.com if you want to use the platform")
+			return
+		}
+
 		email := c.MustGet("email").(string)
 		page := &Page{}
 
