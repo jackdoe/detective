@@ -102,8 +102,21 @@
             document.getElementById(id).innerHTML = '(' + v + '/' + maxchar + ' characters left)'
         }
 
-        document.getElementById("page").addEventListener("keyup",(e) => count(e.target, 'page-left'));
         document.getElementById("hidden").addEventListener("keyup",(e) => count(e.target, 'hidden-left'));
+        var previewE = document.getElementById("preview")
+        var previousRenderedString = ''
+        document.getElementById("page").addEventListener("keyup", (e) => {
+            count(e.target, 'page-left')
+
+            if (previewE && previousRenderedString != e.target.value) {
+                previewE.src = "about:blank";
+
+                previewE.contentWindow.document.open();
+                previewE.contentWindow.document.write(e.target.value);
+                previewE.contentWindow.document.close();
+                previousRenderedString = e.target.value
+            }
+        })
 
         document.addEventListener("keydown", function(e) {
             if ((window.navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)  && e.keyCode == 83) {
