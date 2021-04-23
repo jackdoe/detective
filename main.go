@@ -60,13 +60,14 @@ func sanitize(s string) string {
 }
 
 type Config struct {
-	CookieSecret string            `json:"cookie_secret"`
-	SlackHooks   map[string]string `json:"slack"`
-	ClientID     string            `json:"oauth_client_id"`
-	ClientSecret string            `json:"oauth_client_secret"`
-	PublicCircle string            `json:"public_circle"`
-	SendgridKey  string            `json:"sendgrid_key"`
-	DB           string            `json:"db"`
+	CookieSecret       string            `json:"cookie_secret"`
+	SlackHooks         map[string]string `json:"slack"`
+	ClientID           string            `json:"oauth_client_id"`
+	ClientSecret       string            `json:"oauth_client_secret"`
+	PublicCircle       string            `json:"public_circle"`
+	SendgridKey        string            `json:"sendgrid_key"`
+	PauseRegistrations bool              `json:"pause_registrations"`
+	DB                 string            `json:"db"`
 }
 
 func ReadConfig(fn string) *Config {
@@ -200,7 +201,7 @@ func main() {
 	})
 
 	r.GET("/register", func(c *gin.Context) {
-		if !*local {
+		if config.PauseRegistrations {
 			c.String(400, "registrations are temoporary paused, send an email to detectiveninja@fastmail.com if you want to use the platform")
 			return
 		}
