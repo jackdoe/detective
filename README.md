@@ -13,11 +13,11 @@ for discussion. It is basically a playground with examples.
 ## how to run it
 
 ```
-$ go run . -local-dev -templates ./html
+$ go run . -local-dev -templates ./html -migrate
 
 ```
 
-and then just open https://localhost:8080
+and then just open https://localhost:8080 (it will make test.db sqlite database)
 
 
 ## how to contribute examples

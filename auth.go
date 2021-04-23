@@ -122,9 +122,6 @@ func Auth(clientSecret string, clientID string, scopes []string) gin.HandlerFunc
 			val, _ := json.Marshal(tok)
 			s.Set("token", val)
 			s.Set("email", user.Email)
-			s.Set("name", user.Name)
-			s.Set("photo", user.Picture)
-
 			s.Save()
 
 			log.Printf("redirecting tok: %v, state: %v", tok, state)
@@ -159,12 +156,7 @@ func Auth(clientSecret string, clientID string, scopes []string) gin.HandlerFunc
 		}
 
 		email := s.Get("email").(string)
-		name := s.Get("name").(string)
-		photo := s.Get("photo").(string)
 		ctx.Set("email", email)
-		ctx.Set("photo", photo)
-		ctx.Set("name", name)
-
 	}
 }
 
@@ -174,15 +166,9 @@ func FakeAuth(clientSecret string, clientID string, scopes []string) gin.Handler
 		if s.Get("email") == nil {
 			names := []string{"alice@gmail.com", "bob@gmail.com", "jack@gmail.com", "john@gmail.com"}
 			s.Set("email", names[rand.Intn(len(names))])
-			s.Set("name", "jack doe")
-			s.Set("photo", "https://thumbs.dreamstime.com/b/funny-cartoon-monster-face-vector-square-avatar-halloween-175916751.jpg")
 			s.Save()
 		}
 		email := s.Get("email").(string)
-		name := s.Get("name").(string)
-		photo := s.Get("photo").(string)
 		ctx.Set("email", email)
-		ctx.Set("photo", photo)
-		ctx.Set("name", name)
 	}
 }
