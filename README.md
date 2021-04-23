@@ -9,10 +9,13 @@ for discussion. It is basically a playground with examples.
 
 ![](./screenshot.png)
 
+Screenshot some of the examples. 
+
+
 
 ![](./static/plane.jpg)
 
-(this is a plane I built while making the SUPERMEGALEGOLANG language)
+this is a plane I built while making the SUPERMEGALEGOLANG language
 
 ## how to run it
 
