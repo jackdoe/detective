@@ -53,6 +53,9 @@ examples: <select onchange="use();" id='choose-template'><option value=""></opti
 
             hiddenE.value =  hidden.value
             pageE.value = page.value
+            if (contentChanged) {
+                contentChanged()
+            }
         }
     }
 </script>
