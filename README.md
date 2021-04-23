@@ -8,3 +8,18 @@ for discussion. It is basically a playground with examples.
 
 
 ![](./screenshot.png)
+
+
+## how to run it
+
+```
+$ go run . -local-dev -templates ./html
+
+```
+
+and then just open https://localhost:8080
+
+
+## how to contribute examples
+
+Just fork, add your examples in mystery-*, and open a pull request
