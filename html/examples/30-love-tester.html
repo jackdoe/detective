@@ -1,0 +1,37 @@
+<form id="love">
+<b>Name 1</b>: <input autocomplete="off" id="inputA"><br><br>
+<b>Name 2</b>: <input autocomplete="off" id="inputB"><br><br>
+<input type=submit value="Love Test">
+<br><br>
+
+<div id="match"></div>
+</form>
+
+<script>
+var inputA = document.getElementById("inputA")
+var inputB = document.getElementById("inputB")
+var result = document.getElementById("match")
+
+document.getElementById("love").addEventListener("submit",(e) => {
+    if (inputA.value != "" && inputB.value != "") {
+        var sum = 0;
+        var text = inputA.value + inputB.value
+        for (var i = 0; i < text.length; i++) {
+            sum = sum + text.charCodeAt(i)
+        }
+
+        var score = sum % 100
+        if (text[0] == 'b' || text[0] == 'B') {
+            if (score < 60) {
+                score += 40
+            }
+        }
+        result.innerHTML = '<h1>your match is: ' + (score) + "%</h1><progress max=100 value="+score+">";
+    } else {
+        result.innerHTML = 'fill in name 1 and name 2'
+    }
+
+    e.preventDefault(); 
+    return false  
+})
+</script>
