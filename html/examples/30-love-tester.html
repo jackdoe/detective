@@ -14,18 +14,13 @@ var result = document.getElementById("match")
 
 document.getElementById("love").addEventListener("submit",(e) => {
     if (inputA.value != "" && inputB.value != "") {
-        var sum = 0;
+        var sum = 40;
         var text = inputA.value + inputB.value
         for (var i = 0; i < text.length; i++) {
             sum = sum + text.charCodeAt(i)
         }
 
         var score = sum % 100
-        if (text[0] == 'b' || text[0] == 'B') {
-            if (score < 60) {
-                score += 40
-            }
-        }
         result.innerHTML = '<h1>your match is: ' + (score) + "%</h1><progress max=100 value="+score+">";
     } else {
         result.innerHTML = 'fill in name 1 and name 2'
