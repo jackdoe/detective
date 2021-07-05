@@ -79,7 +79,7 @@ The word File is used because people that made those things up were thinking of 
  
  ```
 
-> See how those pictures have sometimes names attached to them. Those are their creators, some pictures are from the 80s, so it is amazing we can still find out who made them.
+> See how those pictures have sometimes names attached to them. Those are their creators, some pictures are from the 80s, so it is amazing we can still find out who made them. You should always attribute the work of an artist.
 
 So the name 'File' and 'Folder' is used. If people were thinking of libraries I guess we would've been using Book for a file and Shelve for Folder? Anyway, my point is: all things have names, some of the names are strange and old, so don't worry if they make no sense.
 
@@ -169,6 +169,10 @@ Try to decode: 110 105 99 101 32 119 111 114 107 33
 Have you seen The Lord of the Rings? Do you remember the Door of Durin? Where Gandalf couldn't remember how to enter and the fellowship almost got eaten?
 
 The experience through this book will feel like that. Sometimes you will be stuck, and I mean really really stuck, and at some point, as if the cosmos itself colludes, something will click, and you will level up. Sadly I can not know when this will happen to **you**, as every person is different.
+
+## [DAY-0] How to Google
+
+Anything you don't know how to do, you should use google to search for answers. This however is not 
 
 
 <div style="page-break-before:always"></div>

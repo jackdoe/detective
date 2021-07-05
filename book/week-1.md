@@ -52,3 +52,132 @@ document.body.addEventListener('keydown', (e) => {
 
 Don't worry about what it all means. Just type it character by character. Now double click on the file and try out your program, just start typing as the web page is open, and characters will become bold as you type them.
 
+## [DAY-1] Touch Typing
+
+Today just spend the day chilling on keybr.com
+
+## [DAY-2] Touch Typing using your program
+
+Open touchtyping.html and spend the day using your awesome program. Once you open it, right click and then click on `View Source` to remember that you actually wrote this! Good job!
+
+## [DAY-3] HTML
+
+From now on the HTML examples will be more code and less text, so you just have to go through them with your parent.
+
+```
+<html>
+    <body>
+        <h2>welcome!</h2>
+        <p>
+            this is my <b>first web page</b> it has also <i>weird twist</i>!
+        </p>
+        <hr>
+        <p>
+            and a line
+        </p>
+    </body>
+</html>
+```
+
+Try to touch type as you are writing this, no need to hurry.
+
+```
+<html>
+<body>
+    <h2>welcome!</h2>
+    <p>
+        this is my <b>first web page</b>!
+    </p>
+    and it has a bug!<br>
+    <button onclick="document.body.appendChild(this.cloneNode(true))">🐛</button>
+</body>
+</html>
+```
+
+This is a funny one, you might not know how to write 🐛, but just google 'bug emoji' and copy it from there. After you open the web page, click on the bug to see what happens.
+
+You see we add this `onclick=...` which is code that is going to run every time you click on the bug, and what this code does it copies the button and adds it to the page, including the `onclick=..` stuff, so the other button you can press and it will copy itself again!
+
+Try to add more buttons by yourself with other emojis, 🏍️, 🏂, 🐓 or 🐧 for example.
+
+
+## [DAY-4] HTML
+
+Making a presentation with HTML
+
+```
+<html>
+    <body style="font-size: 24px;">
+        <h1>Presentation For School</h1>
+        <small>by: John, from class 4</small>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+
+        <h1>First Slide</h1>
+        <ul>
+            <li>Something</li>
+            <li>very <b>important</b></li>
+            <li>and very <i>strange</i></li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <h1>Second Slide</h1>
+        <ul>
+            <li>Something Else</li>
+            <li>very <u>underline</u></li>
+            <li>and very <del>weird</del></li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <h1>Third Slide</h1>
+        <ul>
+            <li>... surely we can come up with a line</li>
+            <li>... and another line</li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <hr>
+    </body>
+</html>
+```
+
+## [DAY-5] Touch Typing
+
+Use your program to touchtype or go to keybr.com. Don't rush.
+
+
+## [DAY-6] HTML
+
+This day is completely free style, try to put all kinds of HTML words inside each other, for example:
+
+```
+<html>
+  <body>
+    <marquee>
+      <ul>
+        <li>
+          <h1>
+            <i>
+              hello
+            </i>
+          </h1>
+        </li>
+      </ul>
+    </marquee>
+  </body>
+</html>
+```
+
+Try to add the self cloning 🐛 button to that page.
+
+
+
