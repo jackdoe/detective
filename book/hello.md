@@ -64,7 +64,15 @@ The schedule is roughly as follows:
   * python: basics
   * python: pygame
 * Week 16
-  * 
+  * python: love match
+  * python: trivia game
+  * python: turtle
+* Week 17
+  * python: dungeon game
+  * python: turtle grid
+  * python: turtle keyboard input
+* Week 18
+  * python: turtle tic tac toe
 
 
 In most of the weeks you also go back, waaay back, every day you re-iterate variables and for loops, print the numbers from one to 10 forever, ask how many times to be printed, etc.
@@ -82,7 +90,7 @@ The Robot Turtles game is amazing as well, you can find it here: https://www.thi
 
 Scratch works for some kids, mine didn't enjoy it much.
 
-Buy few Arduino NANOs (cheap clones from amazon work as well, but you need to install ch340 driver), and some servo motors and write few super basic programs that turn the servo slowly in one direction or another. Connect black/brown wire to gnd, red wire to 5v and orange wire to D9, and run:
+Buy few Arduino NANOs (cheap clones from amazon work as well, but you need to install ch340 driver), and some servo motors and write few super basic programs that turn the servo slowly in one direction or another. Connect `black/brown wire to gnd, red wire to 5v and orange wire to D9`, and run:
 
 ```
 #include <Servo.h>
@@ -103,5 +111,6 @@ void loop()  {
   delay(500);
 }
 ```
+
 
 <div style="page-break-before:always"></div>
