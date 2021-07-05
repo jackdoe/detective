@@ -180,14 +180,14 @@ It getting increasingly difficult to distinguish between good and bad informatio
 
 The rules about how to use google are:
 
+* The internet is sus!
+* Never put your real name or phone number or address anywhere
 * Never download anything unless your parent approves
 * Never run anything you downloaded (sometimes downloads just start automatically)
-* Dont trust messages like 'click here to get free iphone' or 'clean your computer for free'
-* Never put your real name or phone number or address anywhere
-* The internet is sus!
+* Don't trust messages like 'click here to get free iPhone' or 'clean your computer for free'
 * Always ask your parent for help if you are not sure.
 
-There is noting free on the internet. Even this book, even though I am writing it for free, and you can get it for free, but I am hosting it on GitHub (for free), and GitHub, and therefore Microsoft, knows you are reading it, and later they will use that information to show you better ads, or maybe they will use it for some other purpose, like to train a machine to create better text, but one thing you must remember is that there is nothing free on the internet.
+There is noting free on the internet. Even this book, even though I am writing it for free, and you can get it for free, but I am hosting it on GitHub (and I don't pay for that), and GitHub, and therefore Microsoft, knows you are reading it, and later they will use that information to show you better ads, or maybe they will use it for some other purpose, like to train a machine to create artificial text, but one thing you must remember is that there is nothing free on the internet.
 
 
 <div style="page-break-before:always"></div>
