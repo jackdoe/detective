@@ -152,7 +152,9 @@ Making a presentation with HTML
 
 ## [DAY-5] Touch Typing
 
-Use your program to touchtype or go to keybr.com. Don't rush.
+Use your program to touch type or go to keybr.com. 
+
+Don't rush.
 
 
 ## [DAY-6] HTML
@@ -178,6 +180,3 @@ This day is completely free style, try to put all kinds of HTML words inside eac
 ```
 
 Try to add the self cloning 🐛 button to that page.
-
-
-

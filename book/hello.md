@@ -32,6 +32,7 @@ The schedule is roughly as follows:
 * Week 2
   * HTML: tables
   * HTML: lists
+  * Touch Typing
 * Week 3
   * HTML: tables lists
   * JavaScript: few small programs
@@ -124,5 +125,7 @@ Sometimes there is very little motivation. Kids are super tired from school and 
 Anything worth doing, is worth doing poorly. If you cant spend 30 minutes, spend 15, spend 5 minutes if you have to, or even 1. It is all worth it.
 
 Try to spend time in the morning, at least on the weekends, and first thing after school on school days.
+
+We tried to setup time before or after dinner, and it is very very difficult.
 
 <div style="page-break-before:always"></div>
