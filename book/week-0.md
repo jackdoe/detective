@@ -172,7 +172,22 @@ The experience through this book will feel like that. Sometimes you will be stuc
 
 ## [DAY-0] How to Google
 
-Anything you don't know how to do, you should use google to search for answers. This however is not 
+Anything you don't know how to do, you should use google to search for answers. This however is not easy to know what is good link to read and what is not, try to read from verified sources, like wikipedia, python.org, stackoverflow, and university websites, ask your parent to help.
+
+There is a lot of scams on the internet, you will open websites that claim you have viruses on your computer and you need to pay 20$ to clean it, or that you need to install this amazing program that will speed up your internet. Sometimes on very trusted websites you will see ads that are pure scams, for example that looks like Download buttons to get the program you wanted, but it will just download a virus.
+
+It getting increasingly difficult to distinguish between good and bad information as well, some websites are just poorly written articles, so they can make people clicking on them in order to get money from ads. With time, and with the help of your parent you will learn how to recognize the good articles.
+
+The rules about how to use google are:
+
+* Never download anything unless your parent approves
+* Never run anything you downloaded (sometimes downloads just start automatically)
+* Dont trust messages like 'click here to get free iphone' or 'clean your computer for free'
+* Never put your real name or phone number or address anywhere
+* The internet is sus!
+* Always ask your parent for help if you are not sure.
+
+There is noting free on the internet. Even this book, even though I am writing it for free, and you can get it for free, but I am hosting it on GitHub (for free), and GitHub, and therefore Microsoft, knows you are reading it, and later they will use that information to show you better ads, or maybe they will use it for some other purpose, like to train a machine to create better text, but one thing you must remember is that there is nothing free on the internet.
 
 
 <div style="page-break-before:always"></div>
