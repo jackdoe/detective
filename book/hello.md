@@ -6,6 +6,10 @@ This chapter is for parents, kids skip to the next one.
 
 This book is for parents who know how to code and for kids who don't, but especially for parents and kids who can spend 30 minutes per day, _every day_. I am writing this book as I am teaching my daughter (10), and you know how in some cooking shows, they skip the part where the food is cooking? I wont do that. The book will be longer than it should.
 
+Again, if your children are older, or younger, this book might not work, you could of course still find pieces that work for you.
+
+This is more of a log of my experience so far.
+
 What you need:
 
 * Computer
