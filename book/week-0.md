@@ -5,9 +5,9 @@ day0: learn about the computer
 day1: touch typing on keybr.com
 day2: install python and make a program
 day3: touch typing using your program
-day4: html
+day4: HTML
 day5: touch typing
-day6: html
+day6: HTML
 ```
 
 This week is one of the more difficult ones. Lots of new things, and some of them might not work on your computer because it is too new or too old, for which I apologize. You might need a bit of help. If you get stuck just call a friend or parent to help you out.
