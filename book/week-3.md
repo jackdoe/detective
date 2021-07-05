@@ -3,9 +3,9 @@
 ```
 day0: View Source
 day1: Inspect
-day2: HTML
-day3: HTML
-day4: HTML
+day2: Images
+day3: Licenses
+day4: Touch Typing
 day5: HTML
 day6: HTML fun
 ```
@@ -163,10 +163,162 @@ Hello, and welcome to my page. I hope you will like this image.
 Image puppy.
 ```
 
-If you have an image that has no information, like it is just there to make the site pretty, use `alt=""` then the reader will skip it.
+If you have an image that has no information, like it is just there to make the site pretty, use `alt=""` then the screen reader will skip it.
 
 
-## [DAY-3] HTML
-## [DAY-4] HTML
-## [DAY-5] HTML
-## [DAY-6] HTML
+## [DAY-3] Licenses
+
+If you take a picture of something you are the owner of that picture, and you can put it on your website and say you have the rights of that picture. It is up to you to decide if people should link to it by deciding what under license you will publish the image. There are many licenses you can choose from, there are some that say 'this picture is free for anyone to do whatever they want' or 'you can republish the picture but you cant make money selling it' or 'you can publish it but not print it in books' etc etc.
+
+Complicated stuff this licensing, but the thing you have to remember, it is up to the creator to decide under what license their work can be distributed.
+
+Some licenses you can check out with your parents:
+
+* Creative Commons Licenses CC-BY https://creativecommons.org/licenses/
+* GPL https://www.gnu.org/licenses/gpl-3.0.en.html
+* MIT License https://opensource.org/licenses/MIT
+* Apache License https://www.apache.org/licenses/LICENSE-2.0
+* Public Domain https://en.wikipedia.org/wiki/Public-domain-equivalent_license
+* Copyright https://en.wikipedia.org/wiki/Copyright
+
+When you want to use someone else's work and it is not clear what license it uses, it is best to ask them. At least that is what I do. People are usually nice and they give me permission to use their work.
+
+It is somewhat controversial what is the right way forward, which license to use and what is the best for you and for the world. Ask to your parent about what happens when you take a picture of a painting of a picture of a video and then you edit the video to include the picture you took in it..
+
+Check out https://tldrlegal.com/ for super short description of licenses
+
+## [DAY-4] Touch Typing
+
+relax and spend the day touch typing
+
+## [DAY-5] HTML Title
+
+```
+<html>
+  <head>
+    <title>THIS IS SPARTA</title>
+  </head>
+  <body>
+    <marquee>
+      <ul>
+        <li>
+          <a href="https://wikipedia.com">click me</a>
+        </li>
+        <li>
+          <mark>hello world</mark>
+        </li>
+      </ul>
+    </marquee>
+  </body>
+</html>
+```
+
+Usually bodies have a `<head>` hehe.
+
+In html in the `head` tag you can put things that will help the browser. For example, what is the `title` of this page? or what language is this page? Who is the author of this page? etc..
+
+You can also put there some style, changing the body's background color, or the color of the text in the `h1` or `p`:
+
+```
+<html>
+  <head>
+    <style>
+      body {
+        background: blue;
+      }
+      p {
+        color: pink;
+      }
+      h1 {
+        color: cyan;
+      }
+    </style>
+    <title>some title</title>
+  </head>
+  <body>
+    <center>
+      <p>
+        Hello Universe
+      </p>
+      <h1>hello world</h1>
+    </center>
+  </body>
+</html>
+```
+
+The _language_ we use inside the `style` tag is called `CSS`, and it is quite simple (on its surface). We wont get deep into it for a while, but if you are interested check out https://developer.mozilla.org/en-US/docs/Web/CSS.
+
+You see how in certain tags we can use different language, not html, like in `<style>` we use CSS, in `<script>` we use JavaScript, we are going to do more examples with it soon, but you can check out https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+## [DAY-6] HTML fun
+
+Many buttons
+
+```
+<button onclick="makeManyButtons()">🤖</button>
+<script>
+    function makeManyButtons() {
+        // try to make million buttons!
+
+        for(var i = 0; i < 100; i++) {
+            var button = document.createElement('button')
+            button.innerText = '🐹'
+            document.body.appendChild(button)
+        }
+    }
+</script>
+```
+
+Replicator
+
+```
+<button onclick="replicate(10,'🦊')">🤖</button>
+<script>
+    function replicate(n,buttonText) {
+        // try to make million buttons!
+
+        for(var i = 0; i < n; i++) {
+            var button = document.createElement('button')
+            button.onclick = function () {
+                replicate(20,'🦓')
+            };
+            button.innerText = buttonText
+            document.body.appendChild(button)
+        }
+    }
+</script>
+```
+
+
+Canvas
+
+```
+<html>
+<body style="padding: 0; margin: 0">
+<canvas id="squares"></canvas>
+<script>
+var canvas=document.getElementById('squares');
+var ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+function draw() {
+   ctx.fillStyle= '#' + Math.floor(Math.random()*16777215).toString(16);
+   ctx.globalAlpha=0.5;
+
+   var size=Math.floor((Math.random()) * 60) + 1;
+   var x = Math.floor(Math.random()*canvas.width)
+   var y = Math.floor(Math.random()*canvas.height)
+
+   ctx.fillRect(x, y, size, size);
+};
+
+setInterval(draw,10);
+// why dont you try to make them rectangles instead of squares?
+// or maybe even circles? google for 'canvas fillRect' and 'canvas arc'
+</script>
+</body>
+</html>
+```
+
+The last one is quite crazy! But I am sure you will like the result when done.
