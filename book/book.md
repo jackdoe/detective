@@ -1,9 +1,18 @@
-# Programming for Kids and Parents
+# Programming for Kids and Parent
 
 > by: Borislav Nikolov
 
 > year: 2021
 
+The parent has to know how to program.
+
+Spend 30 minutes per day.
+
+Every day.
+
+<br>
+<br>
+"Anything worth doing is worth doing badly." — G. K. Chesterton
 <br>
 <br>
 

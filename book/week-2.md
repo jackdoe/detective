@@ -6,7 +6,7 @@ day1: HTML tables and lists
 day2: HTML multiplication table
 day3: HTML multiplication table
 day4: touch typing
-day5: touch typing
+day5: HTML Links
 day6: HTML fun
 ```
 
@@ -157,8 +157,21 @@ Finish writing the whole multiplication table.
 ## [DAY-4] Touch Typing
 Spend the day touch typing.
 
-## [DAY-5] Touch Typing
-Spend the day touch typing.
+## [DAY-5] Links
+
+The most powerful feature of HTML is to be able to link to another place in the internet, try this:
+
+```
+<html>
+    <body>
+        hi, <a href="https://wikipedia.com">click here</a> to go to wikipedia
+    </body>
+</html>
+```
+
+The `a` tag with its `href` attribute is one of the most important things of the modern internet, it means I can have a web page, and I can link to someone else's web page, and they can link to someone else and so on..
+
+Whatever is in the `href` attribute this is where the browser will go after you click on whatever is inside the `<a></a>`, in our case `click here`. So after you click on `click here` your browser will go to wikipedia.com, and from there when you click somewhere it will go to wherever that `a`'s `href` points to.
 
 ## [DAY-6] HTML fun
 
