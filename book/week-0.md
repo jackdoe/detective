@@ -172,7 +172,7 @@ The experience through this book will feel like that. Sometimes you will be stuc
 
 ## [DAY-0] How to Google
 
-Anything you don't know how to do, you should use google to search for answers. This however is not easy to know what is good link to read and what is not, try to read from verified sources, like wikipedia, python.org, stackoverflow, and university websites, ask your parent to help.
+Anything you don't know how to do, you should use google to search for answers. However it is not easy to know what is good link to read and what is not, try to read from verified sources, like wikipedia, python.org, stackoverflow, mozilla and university websites, ask your parent to help.
 
 There is a lot of scams on the internet, you will open websites that claim you have viruses on your computer and you need to pay 20$ to clean it, or that you need to install this amazing program that will speed up your internet. Sometimes on very trusted websites you will see ads that are pure scams, for example ads that looks like Download buttons to get the program you wanted, but it will just download a virus.
 
