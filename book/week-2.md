@@ -252,11 +252,11 @@ It actually is a tree, every tag has children, and siblings
              /      |      \
             /       |       \
            /        |        \
-        <tr>      <tr>       <tr>         <--- siblings
+        <tr>      <tr>       <tr>         <--- siblings, same parent
          /\        / \        / \
         /  \      /   \      /   \
-      <th> <th> <td>  <td>  <td> <td>     <--- the two td are siblings
-      |      |    |     |    |     |
+      <th> <th> <td>  <td>  <td> <td>     <--- the two td with same parent
+      |      |    |     |    |     |           are siblings
      Name  Year <mark> <h1> <b>  <marquee>
                   |      |   |      |
                 hello world move   <i>
