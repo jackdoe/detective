@@ -174,7 +174,7 @@ The experience through this book will feel like that. Sometimes you will be stuc
 
 Anything you don't know how to do, you should use google to search for answers. This however is not easy to know what is good link to read and what is not, try to read from verified sources, like wikipedia, python.org, stackoverflow, and university websites, ask your parent to help.
 
-There is a lot of scams on the internet, you will open websites that claim you have viruses on your computer and you need to pay 20$ to clean it, or that you need to install this amazing program that will speed up your internet. Sometimes on very trusted websites you will see ads that are pure scams, for example that looks like Download buttons to get the program you wanted, but it will just download a virus.
+There is a lot of scams on the internet, you will open websites that claim you have viruses on your computer and you need to pay 20$ to clean it, or that you need to install this amazing program that will speed up your internet. Sometimes on very trusted websites you will see ads that are pure scams, for example ads that looks like Download buttons to get the program you wanted, but it will just download a virus.
 
 Its getting increasingly difficult to distinguish between good and bad information as well, some websites are just poorly written articles, so they can make people clicking on them in order to get money from ads. With time, and with the help of your parent you will learn how to recognize the good articles.
 
