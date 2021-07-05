@@ -186,6 +186,7 @@ In general the first thing you should do when you don't know how to do something
 
 So google 'how to install python', you will see lots of results, some of them will tell you how to install the old version of python, and some will be for the too old or too new version of windows. This makes things a bit more difficult.
 
+Try to download from https://www.python.org/downloads/ and do it yourself, ask your parent for help if you are stuck.
 
 
 ## [DAY-2] Make a useful program
