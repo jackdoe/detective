@@ -73,4 +73,35 @@ The reason for so much emphasis on HTML is because it helps with understanding h
 
 Also it is very easy to debug, and inspect, and get immediate feedback. There are many 'hackers' now on tictok or youtube that shows you how to get a lot robux(money) in roblox by inspecting the page and modifying the HTML, so I think HTML is very important to be understood, not only because it teaches hierarchy, but also it is the canvas of the web.
 
+
+## Other materials
+
+Play other games as well, https://tomorrowcorporation.com/ has some brilliant games, Human Resource Machine is great way to learn loops and conditional jumps, and 7 Billion Humans is amazing for high level concepts, including recursion and sorting.
+
+The Robot Turtles game is amazing as well, you can find it here: https://www.thinkfun.com/products/robot-turtles/
+
+Scratch works for some kids, mine didn't enjoy it much.
+
+Buy few arduino nanos (cheap clones from amazon work as well, but you need to install ch340 driver), and some servo motors and write few super basic programs that turn the servo slowly in one direction or another. Connect black/brown wire to gnd, red wire to 5v and orange wire to D9, and run:
+
+```
+#include <Servo.h>
+#define SERVO_PIN 9
+Servo s;
+void setup()  {
+  s.attach(SERVO_PIN, 1000, 2000);
+}
+
+void loop()  {
+  s.write(0);
+  delay(500);
+
+  s.write(60);
+  delay(500);
+
+  s.write(120);
+  delay(500);
+}
+```
+
 <div style="page-break-before:always"></div>
