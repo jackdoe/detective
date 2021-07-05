@@ -82,7 +82,7 @@ The Robot Turtles game is amazing as well, you can find it here: https://www.thi
 
 Scratch works for some kids, mine didn't enjoy it much.
 
-Buy few arduino nanos (cheap clones from amazon work as well, but you need to install ch340 driver), and some servo motors and write few super basic programs that turn the servo slowly in one direction or another. Connect black/brown wire to gnd, red wire to 5v and orange wire to D9, and run:
+Buy few Arduino NANOs (cheap clones from amazon work as well, but you need to install ch340 driver), and some servo motors and write few super basic programs that turn the servo slowly in one direction or another. Connect black/brown wire to gnd, red wire to 5v and orange wire to D9, and run:
 
 ```
 #include <Servo.h>
