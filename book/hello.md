@@ -15,6 +15,8 @@ What you need:
 
 If you don't have a you can buy raspberry pi 400 for 70$ or so, or something similar that you attach to your TV. If you don't have patience, buy some chamomile tea. You don't need internet subscription, but you would need a bit of internet to download python and do few google searches.
 
+> NB: In the book I refer to 'notepad' or 'double click' assuming most people run windows, if you don't, you will have to translate what the instructions mean.
+
 The schedule is roughly as follows:
 
 * Week 0
@@ -28,7 +30,7 @@ The schedule is roughly as follows:
   * HTML: lists
 * Week 3
   * HTML: tables lists
-  * javascript: few small programs
+  * JavaScript: few small programs
 * Week 4
   * python: code together a text dungeon game
 * Week 5
@@ -49,18 +51,26 @@ The schedule is roughly as follows:
   * python: make text tic tac toe game
 * Week 12
   * python: pygame
-  * fetch the coin
+  * python: turtle
 * Week 13
   * python: pygame
+  * python: turtle
 * Week 14
   * python: basics
+  * python: turtle
+* Week 15
+  * HTML: make a table
+  * python: make tic tac toe again
+  * python: basics
+  * python: pygame
+* Week 16
+  * 
 
 
 In most of the weeks you also go back, waaay back, every day you re-iterate variables and for loops, print the numbers from one to 10 forever, ask how many times to be printed, etc.
 
 The reason for so much emphasis on HTML is because it helps with understanding hierarchy, `tr` is child of `table`, `table` is child of `body` body is child of `html`, `td` is a sister to `td` and both are children of `tr` etc, it helped a lot with my daughter understanding how the `else` is sibling to the `if` and how both are children to `while`.
 
-Also it is very easy to debug, and inspect, and get immediate feedback.
-...
+Also it is very easy to debug, and inspect, and get immediate feedback. There are many 'hackers' now on tictok or youtube that shows you how to get a lot robux(money) in roblox by inspecting the page and modifying the HTML, so I think HTML is very important to be understood, not only because it teaches hierarchy, but also it is the canvas of the web.
 
 <div style="page-break-before:always"></div>
