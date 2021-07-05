@@ -117,4 +117,12 @@ void loop()  {
 ```
 
 
+## Motivation
+
+Sometimes there is very little motivation. Kids are super tired from school and playdates and extracurricular activities, makes it hard to spend 30 minutes per day on something. Netflix and YouTube and etc are so much more interesting than what I have to offer, it is a rigged game.. Sad that I have to compete with billion parameter models, but here we are.
+
+Anything worth doing, is worth doing poorly. If you cant spend 30 minutes, spend 15, spend 5 minutes if you have to, or even 1. It is all worth it.
+
+Try to spend time in the morning, at least on the weekends, and first thing after school on school days.
+
 <div style="page-break-before:always"></div>
