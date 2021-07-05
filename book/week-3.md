@@ -59,7 +59,113 @@ Lets try it. Make a new file with this content:
 Open the file and then right click on `0$` and click inspect. Then you will see `<b>0$</b>` if you double click on it, you will be able to change it, and you will see the new version. Now reload the page, and you will see the old value is back.
 
 
-## [DAY-2] HTML
+## [DAY-2] HTML Images
+
+To show an image you need the `img` tag, and give it `src` attribute with the address of the image, for example if I want to display https://picsum.photos/id/237/200/300 I have to do type it like this:
+
+```
+<html>
+  <body>
+    <img src="https://picsum.photos/id/237/200/300">
+    <img src="https://picsum.photos/id/40/200/300">
+  </body>
+</html>
+```
+
+Lets put the images in a table:
+
+```
+<html>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <img src="https://picsum.photos/id/237/200/300">
+        </td>
+        <td>
+          <img src="https://picsum.photos/id/40/200/300">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+Now of course we can have `img` in `a`, try this:
+
+```
+<html>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <a href="https://wikipedia.com">
+            <img src="https://picsum.photos/id/237/200/300">
+          </a>
+        </td>
+        <td>
+          <a href="https://gutenberg.org">
+            <img src="https://picsum.photos/id/40/200/300">
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+Now you can click on the dog or the nose and it will lead you to the pages you link to.
+
+Is it possible to have `img` and text in `a`? Well I am glad you asked!
+
+```
+<html>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <a href="https://wikipedia.com">
+            <img src="https://picsum.photos/id/237/200/300">
+            <br>
+            This dog leads to wikipedia
+          </a>
+        </td>
+        <td>
+          <a href="https://gutenberg.org">
+            <img src="https://picsum.photos/id/40/200/300">
+            <br>
+            This cat (I think) leads to guttenberg.org
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+```
+
+I even have `<br>` in the `a`, now you can click either on the image or on the text.
+
+There is one more very important attribute of the `img` tag, and this is the `alt` attribute, it is used by people who are blind or visually impaired to know what kind of picture is on the page. In our example we can put `alt="puppy"` on the puppy picture.
+
+```
+<p>
+  Hello, and welcome to my page.
+  I hope you will like this image.
+</p>
+<img src="https://picsum.photos/id/237/200/300" alt="puppy">
+```
+
+If a blind person visits this page, they use a screen reader that reads most of the text on the page, and if we have `alt` attribute on images it will say `Image ...` and whatever the value of `alt` is, in our case "puppy". So the reader will say:
+
+```
+Hello, and welcome to my page. I hope you will like this image. 
+
+Image puppy.
+```
+
+If you have an image that has no information, like it is just there to make the site pretty, use `alt=""` then the reader will skip it.
+
+
 ## [DAY-3] HTML
 ## [DAY-4] HTML
 ## [DAY-5] HTML
