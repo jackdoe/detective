@@ -35,6 +35,7 @@ The schedule is roughly as follows:
   * Touch Typing
 * Week 3
   * HTML: tables lists
+  * HTML: images, licenses
   * JavaScript: few small programs
 * Week 4
   * python: code together a text dungeon game

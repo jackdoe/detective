@@ -246,9 +246,9 @@ You can also put there some style, changing the body's background color, or the 
 </html>
 ```
 
-The _language_ we use inside the `style` tag is called `CSS`, and it is quite simple (on its surface). We wont get deep into it for a while, but if you are interested check out https://developer.mozilla.org/en-US/docs/Web/CSS.
+The _language_ we use inside the `style` tag is called `CSS`, and it is quite simple (on its surface). We wont get deep into it for a while, but if you are interested check out at https://developer.mozilla.org/en-US/docs/Web/CSS
 
-You see how in certain tags we can use different language, not html, like in `<style>` we use CSS, in `<script>` we use JavaScript, we are going to do more examples with it soon, but you can check out https://developer.mozilla.org/en-US/docs/Web/JavaScript
+You see how in certain tags we can use different language, not html, like in `<style>` we use CSS, in `<script>` we use JavaScript, we are going to do more work with it soon, but you can check out at https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ## [DAY-6] HTML fun
 
