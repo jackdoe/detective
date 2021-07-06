@@ -178,7 +178,7 @@ There is a lot of scams on the internet, you will open websites that claim you h
 
 Its getting increasingly difficult to distinguish between good and bad information as well, some websites are just poorly written articles, so they can make people clicking on them in order to get money from ads. With time, and with the help of your parent you will learn how to recognize the good articles.
 
-The rules about how to use google are:
+The rules about how to use the internet are:
 
 * The internet is sus!
 * Never put your real name or phone number or address anywhere
