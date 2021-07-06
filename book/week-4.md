@@ -23,6 +23,7 @@ Your first(or second) python program.. Quite useless, but nevertheless. A progra
 
 `print()` is called a function, functions are kind of mini useful programs, this one will print whatever you tell it. In this case `print("Hi!")` will output `Hi!`. Pretty amazing, I hope one day to explain to you what goes into showing a character on your screen. Remind me to show you Ben Eater's 6502 videos when you grow up.
 
+`"Hi!"` is a string, strings are just series of characters, you can make them in python with `"something"` or `'something'`, either single quotes or double quotes.
 
 ```
 while True:
@@ -54,6 +55,21 @@ while 1 == 1:
 
 `1 == 1` is also True, so this is the same as `while True`
 
+So `while <condition>` will keep running the code **inside** it, while the condition holds true, which in the case of `1 == 1` will always be the case.
+
+```
+while True:
+  zzz = input("what is your name: ")
+  print(zzz)
+```
+
+`input` asks you to type something, and it returns whatever you typed.
+
+`zzz = input(....)` takes whatever input returns, and puts it into memory that we can use later. `zzz` is just a name I picked so I can refer to this value later in the program, in this case on the next line when I do `print(zzz)`
+
+`print(name)` prints whatever is in the memory pointed by `zzz`.
+
+`zzz` is called a `variable`, you can choose the names of your variables, and `zzz` is surely a poor name, because if I use it 100 lines later in the code, I will forget what kind of information it stores, so usually we give names of the variables that make sense, for example:
 
 ```
 while True:
@@ -61,13 +77,44 @@ while True:
   print(name)
 ```
 
-`input` asks you to type something, and it returns whatever you typed.
-
-`name = input(....)` takes whatever input returns, and puts it into memory that later we can use.
-
-`print(name)` prints whatever is in the memory pointed by `name`.
+Now lets break out of the loop!
 
 ```
+while True:
+  name = input("what is your name: ")
+  if name == "pikachu":
+    break
+```
+
+
+`if name == "pikachu":` will run the code inside `if` if whatever is in the `name` variable is equal to the string "pikachu". In this case its only 1 instruction inside it, the `break` instruction.
+
+`break` breaks out of the closest `while` loop, so basically this program will ask what is your name until you type pikachu. It is a bit boring because we never actually print what you typed.
+
+```
+while True:
+  name = input("what is your name: ")
+  print(name)
+  if name == "pikachu":
+    break
+
+print("DONE")
+```
+
+There we go, now it will ask you to type a name, it will print whatever name you typed, and then it will check if the name is equal to "pikachu" it will break the while loop and stop asking. We can actually write this program in a different way. After you break out of the loop, it just continues to execute the program below, in this case will print DONE.
+
+```
+name = ''
+while name != "pikachu":
+  name = input("what is your name: ")
+  print(name)
+
+print("DONE")
+```
+
+MAGIC!
+
+we start by making name equal to empty string, a string with no characters, and then we check is the statement `name != "pikachu"` True? If this is True we will execute the code **inside** the while loop, after the last instruction in the loop, the program jumps back to `while name != "pikachu"` and checks again is name still not equal to "pikachu"? if the statement is False it will not run the code **inside** but will continue, in the above example it will print DONE, because this is the first thing **after** the while loop.
 
 Lets make a more complicated one, this one will ask you what is your name, and if you answer pikachu will print pikaaaaaaachuuuuu and stop, any other answer it will print "Hello, " + answer, so if you type "Jane" it will show "Hello, Jane" and it will ask again.
 
@@ -82,25 +129,55 @@ while True:
 ```
 
 
-
-WIP WIP WIPW IPWIPWIPWIW
-
-`while,if,else,break` are keywords, kind of like `<html>` and `<body>`, `<h1>` etc, those are coming from python itself.
-
-`if name == "pikachu":` checks if name is equal to `pickachu`, you see how  
+In python you can add two strings, if you type "charmander" for name, `x = "Hello, " + name`  will make x to be equal to "Hello, charmander". You can't do `"hello" - name`, but you can do `"hello" * 5` and get "hellohellohellohellohello".
 
 
-checks whatever is in `...` to be `True`, but what does `True` mean? It take a lifetime to find out what is truth, but luckily python is easier than life. for example `1 == 1` is True, `1 == 0` is False (not true), `1 != 0` is True, `!` means not, so `1` is in fact not equal to `0`. The `...` is called `condition` 
+`while,if,else,break` are keywords, kind of like `<html>` and `<body>`, `<h1>` etc, those are coming from python itself. There are not many python keywords, for reference, this is the **complete** list:
 
+```
+False
+True
+None
 
-For example `1 == 1` is `True`, `1 == 0` is `False`. Same for `if ...`
+and      ->   name == "pikachu" and age == "33"
+or       ->   name == "pikachu" or name == "charmander"
+not      ->   not name == "pikachu" is the same as name != "pikachu"
 
+for      -> used if you know how many times you want to do something
+while    -> do something until condition is True
+break    -> break out of the for or while loop 
+continue -> go to the start of the while/for loop and continue from there
 
-`while True` means "forever" because `while ...` . , `True` is also `True`. What is `5 == 1`?
+if       -> if something is true
+elif     -> else if something else is true
+else     -> else do this
 
+in       -> checks if something is in somethhing else, e.g. "pika" in name
+def      -> make a function
 
-If you master those few things you are 75% there, the rest is just searching through sorted and unsorted deck of cards.. anyway, I will show you later.
+as
+assert
+async
+await
+class
+del
+except
+finally
+from
+global
+import
+is
+lambda
+nonlocal
+pass
+raise
+return
+try
+with
+yield
+```
 
+THATS THE WHOLE LANGUAGE, there are no more keywords.
 
 
 
@@ -141,7 +218,6 @@ if what == "east":
 
   else:
     print("I dont understand: " + what)
-
 ```
 
 That is a lot of typing.
@@ -195,9 +271,6 @@ if a == "he" and b == "ll" and c == "o":
   print("hello")
 ```
 
-
-This is going waay too fast, and is super confusing, but its ok, we will be doing this for few weeks, so don't worry if it makes no sense now.
-
 ## [DAY-2] Dungeon Game
 
 Our game is quite limited, and a quick step to improve it is to make you ask where you want to go until you pick one of the options.
@@ -239,26 +312,9 @@ elif what == "north":
 
 ```
 
-We made a small program called `ask` that takes a list of possible answers, and asks you to enter one of them until what you wrote is one of the possible answers, and when the answer matches it returns it to wherever the program was called. In our case we do `what = ask(["yes","no"])` that means `ask` will keep asking, using the `input` program.
+`ask` is a function, just like `print` or `input`, it will keep asking you `> What would you do next: ` until the answer you type is in the possible_answers list, and if it is it will return it to wherever it is called from. So when we have `zzz = ask(["yes","no"]` the value of `zzz` will be whatever is returned from `ask`. Same as `name = input("what is your name)` will put in `name` whatever is returned from `input` which is whatever you typed on your keyboard.
 
-In fact, try making `ask` into a standalone program, make a new file:
-
-```
-possible_answers = ["yes","no"]
-answer = ''
-while True:
-  answer = input("> What would you do next: ")
-  if answer not in possible_answers:
-    print("> try again, it must be one of:", possible_answers)
-  else:
-    break
-```
-
-I cheated a bit changing `return answer` to `break`, but I need to stop the infinite loop, previously it was stopped by `return`, and you cant `return` from the main program (in python).
-
-I user the word `program` as just a piece of code that is run by the processor, there is very little difference between the `main` program, and the `print`, `ask`, `input`, or anything you call with `()`, another name for those is **functions**, so `print` is a function, and `ask`, and `input`. 
-
-Functions usually take some parameters and return some values, for example:
+To make a function in python you need to use the `def` keyword.
 
 ```
 def sum(a,b):
@@ -269,7 +325,9 @@ print(r)
 
 ```
 
-`def` is a python keyword that tells it, look whatever is after that, before `(`, is the name of the function, and inside `(...)` is information coming into the function, like in `sum`'s case, it is the two numbers we want to sum, and since we dont know the numbers before someone calls `sum(1,2)`, we use those placeholders `a` and `b`, what we know is 
+Whatever is between `def` and `(` is the name of the function, in the above example its `sum`. Between `()` you put in the name of the variables you expect to use when someone calls your function. I want to sum two numbers, I dont know what the numbers are, so I just make two variables `a, b` and expect whoever calls my function to give me the numbers, like `r = sum(1737,1231231)`
+
+
 ## [DAY-2] Dungeon Game
 ## [DAY-3] Dungeon Game
 ## [DAY-4] Dungeon Game
