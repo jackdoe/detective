@@ -4,7 +4,7 @@
 day0: Basics of Basics
 day1: Dungeon Game
 day2: Dungeon Game
-day3: Dungeon Game
+day3: Favorite Food
 day4: Dungeon Game
 day5: Dungeon Game
 day6: Dungeon Game
@@ -63,6 +63,7 @@ while True:
   print(zzz)
 ```
 
+
 `input` asks you to type something, and it returns whatever you typed.
 
 `zzz = input(....)` takes whatever input returns, and puts it into memory that we can use later. `zzz` is just a name I picked so I can refer to this value later in the program, in this case on the next line when I do `print(zzz)`
@@ -77,6 +78,51 @@ while True:
   print(name)
 ```
 
+A group of statements with common parent, is called **code block**, in python we use spaces to say what belongs where, so the closest `while,for,if,elif,else` going up is the parent.
+
+```
+while True:
+  name = input("what is your name: ")
+    print(name)
+```
+
+Will throw an error: `IndentationError: unexpected indent` because it makes no sense, there is no valid parent to `print`, This is quite unique in python, most other languages make code blocks with `{}`, but python makes it prettier and easier to read by using indentation (the spaces/tabs). `print(name)` has 4 spaces, while `name = input..` has 2 spaces, so python expect everything in the `while:` to have 2 spaces unless a new block starts.
+
+```
+while True:
+  name = input("what is your name: ")
+  if name == "pikachu":
+    print(name)
+```
+
+This works fine, `print(name)` now has valid parent that also has a parent.
+
+```
+while True:
+  | \
+  |  \
+  |   \
+  |    \
+ if:   name = input
+  |
+print(name)
+```
+
+`while True` has two children, `name = input ..` and `if name == ..` so they must have same indentation, then `if ..:` also expects a code block, so the children of  `if name == ..` need to have one more indentation to whatever indentation the `if` had.
+
+Anyway..
+
+Don't worry too much about it, just don't panic when you see `IndentationError`, and I can promise you, you will see a lot of those. Look at where you got the spaces wrong, and if the block has correct parent.
+
+You have seen by now in JavaScript we use `{}` to group statements into blocks.
+
+```
+if (name == "pikachu") {
+  console.log("pikaaaachuuuuu")
+  console.log("evolutiooonn!")
+}
+```
+
 Now lets break out of the loop!
 
 ```
@@ -85,7 +131,6 @@ while True:
   if name == "pikachu":
     break
 ```
-
 
 `if name == "pikachu":` will run the code inside `if` if whatever is in the `name` variable is equal to the string "pikachu". In this case its only 1 instruction inside it, the `break` instruction.
 
@@ -130,6 +175,7 @@ while True:
 
 
 In python you can add two strings, if you type "charmander" for name, `x = "Hello, " + name`  will make x to be equal to "Hello, charmander". You can't do `"hello" - name`, but you can do `"hello" * 5` and get "hellohellohellohellohello".
+
 
 
 `while,if,else,break` are keywords, kind of like `<html>` and `<body>`, `<h1>` etc, those are coming from python itself. There are not many python keywords, for reference, this is the **complete** list:
@@ -329,6 +375,195 @@ Whatever is between `def` and `(` is the name of the function, in the above exam
 
 
 ## [DAY-2] Dungeon Game
-## [DAY-3] Dungeon Game
-## [DAY-4] Dungeon Game
-## [DAY-5] Dungeon Game
+
+FIGHT TO THE DEATH!
+
+```
+import random
+import time
+
+def fight(playerHP, enemyHP, enemy_name):
+  # fight to the death!
+
+  while playerHP >= 0 and enemyHP >= 0:  
+    punch = random.randint(0, 20)
+    if random.choice(["player","enemy"]) == "player":
+      playerHP = playerHP - punch
+      print("<"+enemy_name+"> hits you for " + str(punch) + ", " + str(playerHP) + " left")
+    else:
+      enemyHP = enemyHP - punch
+      print("you hit <"+enemy_name+"> for " + str(punch) + ", " + str(enemyHP) + " left")
+
+    time.sleep(1)
+
+  return playerHP
+
+
+fight(100, 50, "meerkat")
+```
+
+`import` imports a module.
+
+`random` and `time` those are the `modules` you import, modules are just a group of functions that you can use, for example `time.sleep(1)` makes python sleep for 1 second, it calls the function `sleep()` in the `time` module. `random.choice()` you can give a list of things to choose from, and it will randomly select one of the list. `random.randint(0,20)` means give me a random number between 0 and 20.
+
+`str` is needed to convert integer to string, because 1 is not the same as "1", "1" is actually the ASCII value of the character 1, so somehow we have to convert the raw number 1 to ASCII code 61, and `str()` does that.
+
+lets use it now in our dungeon game
+
+```
+
+import random
+import time
+
+def ask(possible_answers):
+  ...
+
+def fight(playerHP, enemyHP, enemy_name):
+  ...
+
+...
+
+health = 100
+
+what = ask(["east","west","north","south"])
+if what == "east":
+  ...
+  what = ask(["run","fight"])
+  if what == "run":
+    ...
+  elif what == "fight":
+    meerkatHP = 50
+    health = fight(health, meerkatHP, "meerkat")
+    if health <= 0:
+      print("GAME OVER! THE MEERKAT BEAT YOU")
+    else:
+      print("You won against the meerkat, you have " + str(health) + " HP left))
+```
+
+
+## [DAY-3] Favorite Food
+
+Today you have to make only two programs:
+
+```
+bad = ["broccoli","chocolate","pineapple"]
+
+while True:
+  food = input("what is your favorite food: ")
+  if food in bad:
+    print("ewwwww I hate " + food)
+  else:
+    print("yumm, I love " + food)
+
+```
+
+
+And the second one:
+
+```
+bad = ["broccoli","chocolate","pineapple"]
+good = ["pizza","popcorn"]
+while True:
+  food = input("what is your favorite food: ")
+  if food in bad:
+    print("ewwwww I hate " + food)
+  elif food in good:
+    print("yumm, I love " + food)
+  else:
+    print("I have never tried " + food)
+```
+
+Great job!
+
+Spend the rest of the day touch typing.
+
+## [DAY-4] For
+
+`for` does something number of times, if I want to print the numbers from 0 to 99, I could do:
+```
+for i range(100):
+  print(i)
+```
+
+or
+
+```
+for i in range(10, 20):
+  print(i)
+```
+will print the numbers from 10 to 19
+
+```
+colors =  ["red","green","blue"]
+for color in colors:
+  print(color)
+```
+
+will print each of the elements in the list. If you want to print each character of a string in a similar way you can do:
+
+```
+name = "jack"
+for c in name:
+  print(c)
+```
+
+prints:
+
+```
+j
+a
+c
+k
+```
+
+
+## [DAY-5] Love Tester
+
+```
+def love_test(a,b):
+  sum = 0
+  for c in a+b:
+    print(c + ': ' + str(ord(c)))
+    sum += ord(c)
+
+  print('sum is:' + str(sum))
+  return sum % 100
+
+
+while True:
+  nameA = input("first name: ")
+  nameB = input("second name: ")
+
+  print("love test: " + str(love_test(nameA,nameB)))
+```
+
+`ord` takes the ascii code of a character.
+
+`%` is the remainder, so `109 % 100` is 9, basically what is left after you can cleanly divide two numbers, `812 % 100` is 12, you can fit 100 in 819 exactly 8 times, and then there is 12 left, this 12 is the remainder.
+
+So in this program we take two names into the variables `nameA` and `nameB` and then we give them to the love_test function, which sums the ascii code of `nameA+nameB`, and then returns the remainder of 100.
+
+```
+first name: jack
+second name: jane
+j: 106
+a: 97
+c: 99
+k: 107
+j: 106
+a: 97
+n: 110
+e: 101
+sum is:823
+love test: 23
+```
+
+BTW, now you know how those "professional" love testers are made, so if you use https://www.lovetester.nl/ or something similar.. don't read too much into the result. You can easily tweak it to do whatever you want.
+
+
+## [DAY-6] Touch Typing
+
+Whoaa it has been a difficult week.
+
+Relax with some touch typing.
+

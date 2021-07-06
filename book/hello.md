@@ -38,19 +38,18 @@ The schedule is roughly as follows:
   * HTML: images, licenses
   * JavaScript: few small programs
 * Week 4
-  * python: code together a text dungeon game
-* Week 5
   * python: super basic python (print and input and while True)
+* Week 5
+  * python: more basic python
 * Week 6
   * python: make hangman game
 * Week 7
   * python: turtle
 * Week 8
   * HTML: love match
-  * python: love match
   * python: text trivia game
 * Week 9
-  * python: super basic def and for
+  * python: super basic python
 * Week 10
   * python: turtle
 * Week 11
