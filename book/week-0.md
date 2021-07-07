@@ -189,9 +189,6 @@ The rules about how to use the internet are:
 
 There is noting free on the internet. Even this book, even though I am writing it for free, and you can get it for free, but I am hosting it on GitHub (and I don't pay for that), and GitHub, and therefore Microsoft, knows you are reading it, and later they will use that information to show you better ads, or maybe they will use it for some other purpose, like to train a machine to create artificial text, but one thing you must remember is that there is nothing free on the internet.
 
-
-<div style="page-break-before:always"></div>
-
 ## [DAY-1] Touch Typing
 
 Touch typing is just typing without looking, if you are super slow while typing you will get frustrated too soon.
